@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0613.1930                               -->
+<workbook original-version='18.1' source-build='2024.2.0 (20242.24.0613.1930)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnalyticsExtensionsElodie.true...AnalyticsExtensionsElodie />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Tableau_12_76836F75-0BCC-428D-97F5-5DAFD76EFE69_1_TableauTempExtSvc (Multiple Connections)' inline='true' name='federated.0lj2au80h7guqj1f2ckhi19lxdrl' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Sample - Superstore' name='excel-direct.0b3xvgy17j6ppz11om7so1d40rbs'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Rishitha/Documents/My Tableau Repository/Datasources/2024.2/en_US-US/Sample - Superstore.xls' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <_.fcp.AnalyticsExtensionsElodie.true...named-connection caption='tableau-analytics-extension' name='tableau-analytics-extension.130m4g81qb54nf0zxqiag00nr2v4'>
+            <connection class='tableau-analytics-extension' schema='public' />
+          </_.fcp.AnalyticsExtensionsElodie.true...named-connection>
+        </named-connections>
+        <_.fcp.AnalyticsExtensionsElodie.true...relation connection='tableau-analytics-extension.130m4g81qb54nf0zxqiag00nr2v4' name='Tableau_12_76836F75-0BCC-428D-97F5-5DAFD76EFE69_1_TableauTempExtSvc' table='[public].[Tableau_12_76836F75-0BCC-428D-97F5-5DAFD76EFE69_1_TableauTempExtSvc]' type='table' />
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Data source order' datatype='table' name='[__tableau_internal_object_id__].[_72AE0592ADF44238B9EB947538FC48DA]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <_.fcp.AnalyticsExtensionsElodie.true...object caption='Data source order' id='_72AE0592ADF44238B9EB947538FC48DA'>
+            <properties context=''>
+              <analytics-extension-object-node>
+                <script-code />
+                <input>
+                  <relation join='full' type='join'>
+                    <clause type='join'>
+                      <expression op='='>
+                        <expression op='[Orders].[Order ID]' />
+                        <expression op='[Returns].[Order ID]' />
+                      </expression>
+                    </clause>
+                    <relation connection='excel-direct.0b3xvgy17j6ppz11om7so1d40rbs' name='Orders' table='[Orders$]' type='table'>
+                      <columns gridOrigin='A1:U10195:no:A1:U10195:0' header='yes' outcome='2'>
+                        <column datatype='integer' name='Row ID' ordinal='0' />
+                        <column datatype='string' name='Order ID' ordinal='1' />
+                        <column datatype='date' name='Order Date' ordinal='2' />
+                        <column datatype='date' name='Ship Date' ordinal='3' />
+                        <column datatype='string' name='Ship Mode' ordinal='4' />
+                        <column datatype='string' name='Customer ID' ordinal='5' />
+                        <column datatype='string' name='Customer Name' ordinal='6' />
+                        <column datatype='string' name='Segment' ordinal='7' />
+                        <column datatype='string' name='Country/Region' ordinal='8' />
+                        <column datatype='string' name='City' ordinal='9' />
+                        <column datatype='string' name='State/Province' ordinal='10' />
+                        <column datatype='string' name='Postal Code' ordinal='11' />
+                        <column datatype='string' name='Region' ordinal='12' />
+                        <column datatype='string' name='Product ID' ordinal='13' />
+                        <column datatype='string' name='Category' ordinal='14' />
+                        <column datatype='string' name='Sub-Category' ordinal='15' />
+                        <column datatype='string' name='Product Name' ordinal='16' />
+                        <column datatype='real' name='Sales' ordinal='17' />
+                        <column datatype='integer' name='Quantity' ordinal='18' />
+                        <column datatype='real' name='Discount' ordinal='19' />
+                        <column datatype='real' name='Profit' ordinal='20' />
+                      </columns>
+                    </relation>
+                    <relation connection='excel-direct.0b3xvgy17j6ppz11om7so1d40rbs' name='Returns' table='[Returns$]' type='table'>
+                      <columns gridOrigin='A1:B801:no:A1:B801:0' header='yes' outcome='6'>
+                        <column datatype='string' name='Returned' ordinal='0' />
+                        <column datatype='string' name='Order ID' ordinal='1' />
+                      </columns>
+                    </relation>
+                  </relation>
+                </input>
+                <output>
+                  <relation connection='tableau-analytics-extension.130m4g81qb54nf0zxqiag00nr2v4' name='Tableau_12_76836F75-0BCC-428D-97F5-5DAFD76EFE69_1_TableauTempExtSvc' table='[public].[Tableau_12_76836F75-0BCC-428D-97F5-5DAFD76EFE69_1_TableauTempExtSvc]' type='table' />
+                </output>
+              </analytics-extension-object-node>
+            </properties>
+          </_.fcp.AnalyticsExtensionsElodie.true...object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4B850F38-1449-40B9-86AE-9B6E59020913}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E13311C1-B2E9-495C-9452-33A41AC5BFFE}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
